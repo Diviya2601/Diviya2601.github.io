@@ -1,0 +1,20 @@
+#include<AT89S52.h>
+#define ROW P0
+#define COL P1
+const char pattern[9]={0x7E,0xBD,0xDB,0xE7,0xE7,0xDB,0xBD,0x7E};
+void main()
+{
+ROW=0x10;
+COL=0xEF;
+
+while(1)
+{
+char i;
+for(i=0;i<8;i++)
+{
+COL=pattern[i];
+ROW=0x01<<i;
+ROW=0x00;
+}
+}
+}
