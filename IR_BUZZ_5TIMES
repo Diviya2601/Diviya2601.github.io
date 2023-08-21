@@ -1,0 +1,36 @@
+#include<AT89S52.h>
+#define BUZ P0_3 
+#define IR P3_6 
+
+ void delay(int);
+void main(){
+int i;
+IR=1;
+BUZ=0;
+while(1){
+if(IR==0){ 
+for(i=0;i<5;i++)
+{
+BUZ=1;
+delay(100);
+BUZ=0;
+delay(100);
+}
+}
+else
+{
+BUZ=0; 
+}
+}
+}
+
+void delay(int time)
+{
+int i,j;
+for(i=0;i<time;i++)
+{
+for(j=0;j<1275;j++)
+{
+}
+}
+}
