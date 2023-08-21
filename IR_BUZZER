@@ -1,0 +1,14 @@
+#include<AT89S52.h>
+#define BUZ P0_3 /*BUZZER CONNECTED TO PORT2.0*/
+#define IR P3_6 /*IR CONNECTED TO PORT3.7*/
+void main(){
+IR=1;
+BUZ=0;
+while(1){
+if(IR==0){
+BUZ=1;
+}else{
+BUZ=0; 
+}
+}
+}
